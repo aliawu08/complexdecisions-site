@@ -39,7 +39,7 @@ header { border-bottom: 1px solid var(--rule); }
 
 main { flex: 1; }
 .home { padding: 6.5rem 0 6rem; }
-.home .top { display: grid; grid-template-columns: 7fr 5fr; gap: 4rem; align-items: end; }
+.home .top { display: block; }
 h1 {
   font-family: var(--serif); font-weight: 400; color: var(--ink);
   font-size: clamp(2.4rem, 3.6vw, 3.6rem); line-height: 1.18; letter-spacing: -0.005em;
