@@ -48,7 +48,7 @@ h1 {
 .home p, .page p { font-size: 1.05rem; margin: 0 0 1.2rem; }
 .home .lede { font-size: 1.15rem; color: var(--ink); margin: 0; }
 
-.index { margin: 4.5rem 0 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(3, 1fr); }
+.index { margin: 4.5rem 0 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(2, 1fr); }
 .index a {
   display: block; padding: 1.6rem 2rem 1.8rem 0; text-decoration: none;
   border-right: 1px solid var(--hair);
