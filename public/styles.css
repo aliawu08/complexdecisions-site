@@ -22,7 +22,7 @@ body {
   font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; }
-.shell { width: 100%; max-width: 62rem; margin: 0 auto; padding: 0 2rem; }
+.shell { width: 100%; padding: 0 clamp(1.5rem, 5vw, 5.5rem); }
 
 header { border-bottom: 1px solid var(--rule); }
 .bar { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 0 1.4rem; gap: 2rem; }
@@ -38,14 +38,15 @@ header { border-bottom: 1px solid var(--rule); }
 .menu a:hover, .menu a[aria-current] { color: var(--ink); }
 
 main { flex: 1; }
-.home { padding: 7rem 0 7rem; }
+.home { padding: 6.5rem 0 6rem; }
+.home .top { display: grid; grid-template-columns: 7fr 5fr; gap: 4rem; align-items: end; }
 h1 {
   font-family: var(--serif); font-weight: 400; color: var(--ink);
-  font-size: 2.6rem; line-height: 1.22; letter-spacing: -0.005em;
-  margin: 0 0 2rem; max-width: 40rem;
+  font-size: clamp(2.4rem, 3.6vw, 3.6rem); line-height: 1.18; letter-spacing: -0.005em;
+  margin: 0;
 }
-.home p, .page p { font-size: 1.05rem; margin: 0 0 1.2rem; max-width: 38rem; }
-.home .lede { font-size: 1.15rem; color: var(--ink); }
+.home p, .page p { font-size: 1.05rem; margin: 0 0 1.2rem; }
+.home .lede { font-size: 1.15rem; color: var(--ink); margin: 0; }
 
 .index { margin: 4.5rem 0 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(3, 1fr); }
 .index a {
@@ -58,9 +59,10 @@ h1 {
 .index .d { display: block; color: var(--mute); font-size: 0.9rem; }
 .index a:hover .t { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 
-.page { padding: 5.5rem 0 7rem; }
-.page h1 { font-size: 2.2rem; margin-bottom: 2.2rem; }
-.page ul { padding-left: 1.2rem; margin: 0 0 1.2rem; max-width: 38rem; font-size: 1.05rem; }
+.page { padding: 5.5rem 0 7rem; display: grid; grid-template-columns: 4fr 8fr; gap: 4rem; }
+.page h1 { font-size: clamp(2rem, 2.8vw, 2.8rem); margin: 0; }
+.page .body { max-width: 46rem; }
+.page ul { padding-left: 1.2rem; margin: 0 0 1.2rem; font-size: 1.05rem; }
 .page li { margin-bottom: 0.55rem; }
 .page strong { font-weight: 600; color: var(--ink); }
 
@@ -78,8 +80,8 @@ footer { border-top: 1px solid var(--rule); }
   .bar { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.4rem 0 1.2rem; }
   .menu { gap: 1.5rem; }
   .home { padding: 4rem 0 4.5rem; }
-  h1 { font-size: 1.9rem; }
-  .page h1 { font-size: 1.75rem; }
+  .home .top { grid-template-columns: 1fr; gap: 1.5rem; }
+  .page { grid-template-columns: 1fr; gap: 1.5rem; }
   .index { grid-template-columns: 1fr; }
   .index a { border-right: 0; border-bottom: 1px solid var(--hair); padding: 1.2rem 0; }
   .index a + a { padding-left: 0; }
