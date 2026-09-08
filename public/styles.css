@@ -5,7 +5,7 @@
   --mute: #6E6E6E;
   --hair: #DDDDDD;
   --rule: #141414;
-  --serif: "Libre Baskerville", Baskerville, "Times New Roman", Times, serif;
+  --serif: Baskerville, "Hoefler Text", Georgia, "Times New Roman", serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
