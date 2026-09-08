@@ -1,66 +1,88 @@
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/baskerville-400.woff2") format("woff2"); }
+@font-face { font-family: "Libre Baskerville"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/baskerville-400i.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/plex-400.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/plex-500.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/plex-600.woff2") format("woff2"); }
+
 :root {
   --bg: #FFFFFF;
-  --ink: #1A1A1A;
-  --mute: #6B6B6B;
-  --hair: #E2E2E2;
+  --ink: #141414;
+  --body: #2B2B2B;
+  --mute: #6E6E6E;
+  --hair: #DDDDDD;
+  --rule: #141414;
+  --serif: "Libre Baskerville", Baskerville, "Times New Roman", Times, serif;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
 html { font-size: 16px; }
-
 body {
   margin: 0; min-height: 100vh; display: flex; flex-direction: column;
-  background: var(--bg); color: var(--ink);
-  font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.6; -webkit-font-smoothing: antialiased;
+  background: var(--bg); color: var(--body);
+  font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; }
-.shell { width: 100%; max-width: 44rem; margin: 0 auto; padding: 0 1.4rem; }
-header { padding: 2.1rem 0 0; }
-.bar { display: flex; justify-content: space-between; align-items: baseline; gap: 2rem; }
-.wordmark { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.01em; text-decoration: none; white-space: nowrap; }
-.menu { display: flex; gap: 1.5rem; }
+.shell { width: 100%; max-width: 62rem; margin: 0 auto; padding: 0 2rem; }
+
+header { border-bottom: 1px solid var(--rule); }
+.bar { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 0 1.4rem; gap: 2rem; }
+.wordmark {
+  font-family: var(--serif); font-size: 1.15rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink); text-decoration: none; white-space: nowrap;
+}
+.menu { display: flex; gap: 2.2rem; }
 .menu a {
-  font-size: 0.85rem; color: var(--mute); text-decoration: none;
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500;
+  color: var(--mute); text-decoration: none;
 }
-.menu a:hover { color: var(--ink); }
-.menu a[aria-current] { color: var(--ink); }
+.menu a:hover, .menu a[aria-current] { color: var(--ink); }
+
 main { flex: 1; }
-.home { padding: 5rem 0 6rem; }
+.home { padding: 7rem 0 7rem; }
 h1 {
-  font-weight: 500; font-size: 1.55rem; line-height: 1.35;
-  letter-spacing: -0.01em; margin: 0 0 1.5rem; max-width: 34rem;
+  font-family: var(--serif); font-weight: 400; color: var(--ink);
+  font-size: 2.6rem; line-height: 1.22; letter-spacing: -0.005em;
+  margin: 0 0 2rem; max-width: 40rem;
 }
-.home p, .page p { font-size: 0.95rem; margin: 0 0 1.1rem; max-width: 36rem; }
-.home .lede { color: var(--ink); }
-.index { margin: 3.4rem 0 0; border-top: 1px solid var(--hair); }
+.home p, .page p { font-size: 1.05rem; margin: 0 0 1.2rem; max-width: 38rem; }
+.home .lede { font-size: 1.15rem; color: var(--ink); }
+
+.index { margin: 4.5rem 0 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(3, 1fr); }
 .index a {
-  display: flex; justify-content: space-between; align-items: baseline; gap: 2rem;
-  padding: 1.05rem 0; border-bottom: 1px solid var(--hair); text-decoration: none;
+  display: block; padding: 1.6rem 2rem 1.8rem 0; text-decoration: none;
+  border-right: 1px solid var(--hair);
 }
-.index .t { font-weight: 500; font-size: 0.95rem; }
-.index .d { color: var(--mute); font-size: 0.88rem; text-align: right; }
-.index a:hover .t { text-decoration: underline; text-underline-offset: 3px; }
-.page { padding: 4.6rem 0 6rem; }
-.page h1 { margin-bottom: 1.8rem; }
-.page ul { padding-left: 1.1rem; margin: 0 0 1.1rem; max-width: 36rem; }
-.page li { margin-bottom: 0.45rem; }
-.page strong { font-weight: 600; }
-footer { border-top: 1px solid var(--hair); }
+.index a:last-child { border-right: 0; }
+.index a + a { padding-left: 2rem; }
+.index .t { display: block; font-family: var(--serif); font-size: 1.25rem; color: var(--ink); margin-bottom: 0.4rem; }
+.index .d { display: block; color: var(--mute); font-size: 0.9rem; }
+.index a:hover .t { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+.page { padding: 5.5rem 0 7rem; }
+.page h1 { font-size: 2.2rem; margin-bottom: 2.2rem; }
+.page ul { padding-left: 1.2rem; margin: 0 0 1.2rem; max-width: 38rem; font-size: 1.05rem; }
+.page li { margin-bottom: 0.55rem; }
+.page strong { font-weight: 600; color: var(--ink); }
+
+footer { border-top: 1px solid var(--rule); }
 .foot {
-  display: flex; justify-content: space-between; gap: 2rem; padding: 1.3rem 0 1.6rem;
-  font-size: 0.8rem; color: var(--mute);
+  display: flex; justify-content: space-between; gap: 2rem; padding: 1.6rem 0 2rem;
+  font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mute);
 }
 .foot a { color: var(--mute); text-decoration: none; }
 .foot a:hover { color: var(--ink); }
-@media (max-width: 560px) {
+
+@media (max-width: 720px) {
   html { font-size: 15px; }
-  .bar { flex-direction: column; gap: 0.7rem; align-items: flex-start; }
-  .home { padding: 3.6rem 0 4.5rem; }
-  h1 { font-size: 1.35rem; }
-  .index a { flex-direction: column; gap: 0.25rem; }
-  .index .d { text-align: left; }
-  .foot { flex-direction: column; gap: 0.4rem; }
+  .shell { padding: 0 1.25rem; }
+  .bar { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.4rem 0 1.2rem; }
+  .menu { gap: 1.5rem; }
+  .home { padding: 4rem 0 4.5rem; }
+  h1 { font-size: 1.9rem; }
+  .page h1 { font-size: 1.75rem; }
+  .index { grid-template-columns: 1fr; }
+  .index a { border-right: 0; border-bottom: 1px solid var(--hair); padding: 1.2rem 0; }
+  .index a + a { padding-left: 0; }
+  .index a:last-child { border-bottom: 0; }
+  .foot { flex-direction: column; gap: 0.5rem; }
 }
