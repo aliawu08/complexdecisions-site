@@ -4,9 +4,6 @@
   --mute: #6B6862;
   --hair: #E3E0D8;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #161614; --ink: #E9E6DF; --mute: #918D85; --hair: #2C2B28; }
-}
 * { box-sizing: border-box; }
 html { font-size: 17px; }
 body {
