@@ -1,3 +1,6 @@
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/plex-400.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/plex-500.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/plex-600.woff2") format("woff2"); }
 :root {
   --bg: #FFFFFF;
   --ink: #1A1A1A;
@@ -6,10 +9,11 @@
 }
 * { box-sizing: border-box; }
 html { font-size: 16px; }
+
 body {
   margin: 0; min-height: 100vh; display: flex; flex-direction: column;
   background: var(--bg); color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+  font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6; -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; }
@@ -24,7 +28,7 @@ header { padding: 2.1rem 0 0; }
 .menu a:hover { color: var(--ink); }
 .menu a[aria-current] { color: var(--ink); }
 main { flex: 1; }
-.home { padding: 5.5rem 0 6rem; }
+.home { padding: 5rem 0 6rem; }
 h1 {
   font-weight: 500; font-size: 1.55rem; line-height: 1.35;
   letter-spacing: -0.01em; margin: 0 0 1.5rem; max-width: 34rem;
