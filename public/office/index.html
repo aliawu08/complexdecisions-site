@@ -3,52 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Complex Decisions · Office</title>
+<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161614" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317171F'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' fill='%23FBFAF7' text-anchor='middle'%3ECD%3C/text%3E%3C/svg%3E">
+<title>Office — Complex Decisions</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141414'/%3E%3Crect x='14' y='31' width='36' height='2' fill='%23B9A779'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
-  :root { --bg:#F7F5F0; --ink:#1C1C1C; --mute:#6E6E6E; --gold:#B9A779; --hair:#D9D5CC; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#141414; --ink:#E8E4DC; --mute:#8F8B84; --hair:#2A2A2A; } }
-  * { box-sizing:border-box; }
-  html, body { margin:0; height:100%; }
-  body { background:var(--bg); color:var(--ink); font-family:"EB Garamond", Garamond, "Times New Roman", Georgia, serif; -webkit-font-smoothing:antialiased; display:flex; flex-direction:column; min-height:100vh; }
-  nav { padding:1.6rem 2.2rem; display:flex; justify-content:space-between; align-items:center; }
-  nav a, nav span { color:var(--mute); text-decoration:none; font-size:0.72rem; letter-spacing:0.24em; text-transform:uppercase; }
-  nav a:hover { color:var(--ink); }
-  main { flex:1; display:flex; justify-content:center; padding:8vh 8vw 10vh; }
-  .wrap { width:100%; max-width:34rem; }
-  .mark { font-size:0.82rem; letter-spacing:0.42em; text-indent:0.42em; font-weight:500; margin:0; text-align:center; }
-  .rule { width:5.5rem; height:1px; background:var(--gold); margin:2rem auto 2.6rem; }
-  h1 { font-weight:400; font-size:clamp(1.3rem, 2.4vw, 1.6rem); letter-spacing:0.02em; margin:0 0 2.4rem; text-align:center; }
-  .row { display:flex; justify-content:space-between; align-items:baseline; gap:1.5rem; padding:1.1rem 0; border-top:1px solid var(--hair); }
-  .row:last-of-type { border-bottom:1px solid var(--hair); }
-  .row .k { font-size:0.74rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--mute); white-space:nowrap; }
-  .row .v { font-size:1.02rem; text-align:right; }
-  .row .v a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:0.12rem; }
-  .row .v a:hover { color:var(--mute); }
-  .note { margin:2.4rem 0 0; font-size:0.95rem; line-height:1.6; color:var(--mute); text-align:center; }
-  @media (max-width: 600px) { nav { padding:1.2rem; } nav a, nav span { font-size:0.64rem; letter-spacing:0.16em; } .row { flex-direction:column; gap:0.4rem; } .row .v { text-align:left; } }
-  footer { padding:2.4rem 8vw 2.8rem; text-align:center; color:var(--mute); font-size:0.78rem; letter-spacing:0.14em; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<nav><a href="/">Complex Decisions</a><span>Office</span></nav>
-<main>
-  <div class="wrap">
-    <p class="mark">COMPLEX DECISIONS</p>
-    <div class="rule" aria-hidden="true"></div>
-    <h1>Office</h1>
-    <div class="row"><span class="k">Mail</span><span class="v"><a href="https://mail.hostinger.com/" rel="noopener">info@complexdecisions.org</a></span></div>
-    <div class="row"><span class="k">Files</span><span class="v"><a href="#" data-todo="replace with firm drive / data room URL">Workspace</a></span></div>
-    <div class="row"><span class="k">Calendar</span><span class="v"><a href="https://calendar.google.com/" rel="noopener">Calendar</a></span></div>
-    <p class="note">Internal. Access is managed by the firm.</p>
-  </div>
-</main>
-<footer>© 2026 COMPLEX DECISIONS LLC · DELAWARE</footer>
+<header><div class="shell"><div class="bar">
+<a class="wordmark" href="/">Complex Decisions</a>
+<nav class="menu">
+<a href="/practice/">Practice</a>
+<a href="/approach/">Approach</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div></div></header>
+<main><div class="shell"><article class="page">
+<h1>Office</h1>
+<p><a href="https://mail.hostinger.com/" rel="noopener">Mail</a> · <a href="#">Files</a> · <a href="https://calendar.google.com/" rel="noopener">Calendar</a></p>
+<p>Internal. Access is managed by the firm.</p>
+</article></div></main>
+<footer><div class="shell"><div class="foot"><span>Complex Decisions LLC · Delaware</span><a href="mailto:info@complexdecisions.org">info@complexdecisions.org</a></div></div></footer>
 </body>
 </html>
